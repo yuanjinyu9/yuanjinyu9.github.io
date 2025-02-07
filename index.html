@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>随机句子</title>
+</head>
+<body>
+    <div id="sentence" style="font-size: 24px; margin: 20px;"></div>
+    <button onclick="showRandomSentence()" style="padding: 10px;">换一句</button>
+
+    <script>
+        const sentences = [
+            "如果跟你喜欢的人约会碰到前任，你会有什么反应？",
+            "你的他 / 她最讨厌的食物是什么？",
+            "饭店的菜好吃还是家里的好吃？",
+            "用 “我 / 兔子 / 钥匙 / 桥” 造句（心理测试）",
+            "父母对象孩子你怎么排序？",
+            "你喜欢爱一个人，还是被一个人爱？哪种会更幸福一些？",
+            "来了两个陌生人你信女人的话还是男人的话？",
+            "如果让你变成异性，最想干的事情是什么？",
+            "男的是不是天生应该赚钱养家？女的天生负责貌美如花？",
+            "跟异性做过最亲密的事是什么？",
+        ];
+
+        function showRandomSentence() {
+            const index = Math.floor(Math.random() * sentences.length);
+            document.getElementById("sentence").innerText = sentences[index];
+        }
+
+        // 首次加载时显示随机句子
+        showRandomSentence();
+    </script>
+</body>
+</html>
